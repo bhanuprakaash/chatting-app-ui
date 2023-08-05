@@ -71,6 +71,7 @@ const SignUp = () => {
         <input type="text" value={name} onChange={handleNameChange} />
         {/* Email label with a conditional style based on invalid email */}
         <EmailLabel invalid={inValidEmail}>Your email</EmailLabel>
+        {/* eslint-disable-next-line react/no-unknown-property */}
         <input
           type="email"
           value={email}

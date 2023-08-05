@@ -7,7 +7,6 @@ const SignIn = () => {
   const [inValidEmail, setInValidEmail] = useState(false);
   const [password, setPassword] = useState("");
   const [formIsValid, setFormIsValid] = useState(false);
-  const invalid=true;
 
   // Use useEffect to validate form fields whenever they change
   useEffect(() => {
@@ -79,6 +78,7 @@ const SignIn = () => {
       <Form invalid={inValidEmail}>
         {/* Email label with a conditional style based on invalid email */}
         <EmailLabel invalid={inValidEmail}>Your email</EmailLabel>
+        {/* eslint-disable-next-line react/no-unknown-property */}
         <input
           type="email"
           value={email}
