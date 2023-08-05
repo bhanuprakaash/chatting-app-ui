@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Message2 from "./components/Message2";
 import Splash from "./components/Splash";
@@ -6,7 +7,7 @@ import Onboarding from "./components/Onboarding";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Message from "./components/Message";
-import Message1 from "./components/Message1";
+import Message1 from "./components/Message1";s
 import Navigation from "./components/Navigation";
 function App() {
   return (
