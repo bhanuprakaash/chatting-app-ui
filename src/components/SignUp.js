@@ -76,6 +76,7 @@ const SignUp = () => {
           type="email"
           value={email}
           onChange={handleEmailChange}
+          //eslint-disable-next-line react/no-unknow-property
           invalid={inValidEmail}
           onBlur={handleBlur}
         />
