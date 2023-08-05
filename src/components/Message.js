@@ -46,12 +46,12 @@ const Message = () => {
           <img src="./images/Rectangle 1092.png" alt="welcome_message" />
           <div>
             <p>
-              🙏 Namaste! I’m Arya, your AI Vedic help. I'm here to provide
+              🙏 Namaste! I&apos;m Arya, your AI Vedic help. I'm here to provide
               insights from Vedas for daily life concerns.
               <br />
               <br />
               Whether you seek guidance on mantras, general life advice, or
-              specific Vedic interpretations, I’m here to assist you.
+              specific Vedic interpretations, I&apos;m here to assist you.
             </p>
           </div>
         </Chat>
