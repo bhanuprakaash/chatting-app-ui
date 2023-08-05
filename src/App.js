@@ -7,7 +7,7 @@ import Onboarding from "./components/Onboarding";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Message from "./components/Message";
-import Message1 from "./components/Message1";s
+import Message1 from "./components/Message1";
 import Navigation from "./components/Navigation";
 function App() {
   return (
