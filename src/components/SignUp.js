@@ -60,9 +60,8 @@ const SignUp = () => {
       </BackButton>
       <Logo>
         <img
-          src="./images/MOKx logo 1.png"
+          src="./images/mokx_logo.png"
           alt="Logo"
-          referrerPolicy="no-referrer"
         />
       </Logo>
       <Welcome>
