@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Message2 = () => {
   // Array of objects containing messages and their type (customer or bot) and time of message sent
   const messagesArray = [
@@ -30,7 +31,9 @@ const Message2 = () => {
       <ContactInfo>
         <Details>
           <BackButton>
-            <img src="./images/Back(1).svg" alt="back_button" />
+            <Link to="/">
+              <img src="./images/Back(1).svg" alt="back_button" />
+            </Link>
           </BackButton>
           <ProfileImage>
             <img src="./images/Rectangle 1092.png" alt="profile_pic " />

@@ -1,6 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Message1 = () => {
+  // State variables to store form data and validation status
+  const [language, setLanguage] = React.useState("english");
+  const [messages, setMessages] = React.useState([]);
+
+  // Set the messages array based on the language selected
+  React.useEffect(() => {
+    if (language === "english") {
+      setMessages(messagesArray);
+    } else {
+      setMessages(hindiMessagesArray);
+    }
+  }, [language]);
+
+  const buttonWeights = {
+    fontWeight: "800",
+  };
+
+  const buttonWeights1 = {
+    fontWeight: "275",
+  };
+
   // Array containing the chat messages
   const messagesArray = [
     {
@@ -24,6 +46,37 @@ const Message1 = () => {
       time: "09:25 AM",
     },
   ];
+  // Array containing the chat messages in hindi
+  const hindiMessagesArray = [
+    {
+      type: "customer",
+      message: ["Hello! How are you?"],
+      time: "09:25 AM",
+    },
+    {
+      type: "bot",
+      message: ["अपनेपन यथासंभव धीर-धीरे अपने समय  "],
+      time: "09:25 AM",
+    },
+    {
+      type: "customer",
+      message: ["You did your job well!"],
+      time: "09:25 AM",
+    },
+    {
+      type: "bot",
+      message: ["हमारे लेकर वर्गाकार करता। होना त्याग", "क्योंकि विकास करता"],
+      time: "09:25 AM",
+    },
+  ];
+
+  //handle language change functions to change the language state
+  const handleEnglishLanguageChange = () => {
+    setLanguage("english");
+  };
+  const handleHindiLanguageChange = () => {
+    setLanguage("hindi");
+  };
 
   // Render the chat UI
   return (
@@ -33,7 +86,9 @@ const Message1 = () => {
         {/* Details section contains the back button, profile image, and profile name */}
         <Details>
           <BackButton>
-            <img src="./images/Back(1).svg" alt="back_button" />
+            <Link to="/">
+              <img src="./images/Back(1).svg" alt="back_button" />
+            </Link>
           </BackButton>
           <ProfileImage>
             <img src="./images/Rectangle 1092.png" alt="profile_pic " />
@@ -47,8 +102,20 @@ const Message1 = () => {
         {/* Language section contains the language switching button */}
         <Language>
           <p>
-            A<span>/</span>
-            <span>क</span>
+            {/* Apply styling based on the language selected */}
+            <span
+              onClick={handleEnglishLanguageChange}
+              style={language === "english" ? buttonWeights : buttonWeights1}
+            >
+              A
+            </span>
+            <span>/</span>
+            <span
+              onClick={handleHindiLanguageChange}
+              style={language === "hindi" ? buttonWeights : buttonWeights1}
+            >
+              क
+            </span>
           </p>
         </Language>
       </ContactInfo>
@@ -61,7 +128,7 @@ const Message1 = () => {
         </Time>
 
         {/* Iterate over messagesArray and render each chat message with appropriate styling */}
-        {messagesArray.map((message, index) => {
+        {messages.map((message, index) => {
           // Check if the message is from the bot or customer to apply individual styling
           if (message.type === "bot") {
             // Styling for bot messages
@@ -196,14 +263,15 @@ const ProfileName = styled.div`
 const Language = styled.div`
   font-family: Mukta;
   padding-right: 20px;
-  p {
+  span:first-child {
     color: #fbbc04;
     font-size: 16px;
     font-style: normal;
     font-weight: 800;
     line-height: 16px;
+    cursor: pointer;
   }
-  span:first-child {
+  span:nth-last-child(2) {
     color: #fbbc04;
     font-size: 16px;
     font-style: normal;
@@ -216,6 +284,7 @@ const Language = styled.div`
     font-style: normal;
     font-weight: 275;
     line-height: 16px;
+    cursor: pointer;
   }
 `;
 

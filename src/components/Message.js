@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Message = () => {
   // queries array contains the questions that the user will ask the bot and the bot will reply accordingly
@@ -16,7 +17,9 @@ const Message = () => {
         <Details>
           {/* Back button to navigate back */}
           <BackButton>
-            <img src="./images/Back(1).svg" alt="back_button" />
+            <Link to="/">
+              <img src="./images/Back(1).svg" alt="back_button" />
+            </Link>
           </BackButton>
           {/* Profile image and name */}
           <ProfileImage>

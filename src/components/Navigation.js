@@ -13,6 +13,7 @@ const Navigation = () => {
       <Link to="/message">Message</Link>
       <Link to="/message1">Message1</Link>
       <Link to="/message2">Message2</Link>
+      <p>Enabled language switching functionality for Message1 component</p>
     </Container>
   );
 };
@@ -35,5 +36,15 @@ const Container = styled.div`
     width: 120px;
     font-family: Inter;
     background-color: #a1a1a1;
+  }
+  p {
+    color: #69235b;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
   }
 `;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const SignIn = () => {
   // State variables to store form data and validation status
   const [email, setEmail] = useState("");
@@ -41,7 +41,9 @@ const SignIn = () => {
   return (
     <Container>
       <BackButton>
-        <img src="./images/Back.svg" alt="Back-button" />
+        <Link to="/">
+          <img src="./images/Back.svg" alt="Back-button" />
+        </Link>
       </BackButton>
       <Welcome>
         <h3>
@@ -378,6 +380,7 @@ const ForgotPassword = styled.p`
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0.1px;
+  text-align: center;
   cursor: pointer;
   @media screen and (max-width: 375px) {
     font-size: 14px;

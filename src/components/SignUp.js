@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const SignUp = () => {
   // State variables to store form data and validation status
   const [email, setEmail] = useState("");
@@ -54,10 +54,16 @@ const SignUp = () => {
   return (
     <Container>
       <BackButton>
-        <img src="./images/Back.svg" alt="Back-button" />
+        <Link to="/">
+          <img src="./images/Back.svg" alt="Back-button" />
+        </Link>
       </BackButton>
       <Logo>
-        <img src="./images/MOKx logo 1.png" alt="Logo" />
+        <img
+          src="./images/MOKx logo 1.png"
+          alt="Logo"
+          referrerPolicy="no-referrer"
+        />
       </Logo>
       <Welcome>
         <h3>
@@ -87,7 +93,6 @@ const SignUp = () => {
             Your email
           </EmailLabel>
         )}
-        {/* eslint-disable-next-line react/no-unknown-property */}
         {inValidEmail ? (
           <input
             type="email"
