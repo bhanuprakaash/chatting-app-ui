@@ -66,20 +66,46 @@ const SignUp = () => {
         <p>Enter your details and dive into a realm of ancient wisdom! 💫</p>
       </Welcome>
       {/* basic form to enter the details of user for registration and added the prop for animation based on email */}
-      <Form invalid={inValidEmail}>
+      <Form>
         <label>Your name</label>
         <input type="text" value={name} onChange={handleNameChange} />
         {/* Email label with a conditional style based on invalid email */}
-        <EmailLabel invalid={inValidEmail}>Your email</EmailLabel>
+        {inValidEmail ? (
+          <EmailLabel
+            style={{
+              color: "#FF2D1B",
+            }}
+          >
+            Your email
+          </EmailLabel>
+        ) : (
+          <EmailLabel
+            style={{
+              color: "#69235B",
+            }}
+          >
+            Your email
+          </EmailLabel>
+        )}
         {/* eslint-disable-next-line react/no-unknown-property */}
-        <input
-          type="email"
-          value={email}
-          onChange={handleEmailChange}
-          //eslint-disable-next-line react/no-unknow-property
-          invalid={inValidEmail}
-          onBlur={handleBlur}
-        />
+        {inValidEmail ? (
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            onBlur={handleBlur}
+            style={{
+              borderBottom: "1px solid #FF2D1B",
+            }}
+          />
+        ) : (
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            onBlur={handleBlur}
+          />
+        )}
         {inValidEmail && <ErrorMessage>Invalid email address</ErrorMessage>}
         <PassWordLabel>Password</PassWordLabel>
         <input
@@ -208,11 +234,6 @@ const Form = styled.form`
     font-weight: 400;
     line-height: 16px;
   }
-  input[type="email"] {
-    // if invalidEmail is true border bottom turn to red
-    border-bottom: ${(props) =>
-      props.invalid ? "1px solid #FF2D1B" : "1px solid #CDD1D0"};
-  }
   button {
     background-color: #ffc746;
     border-radius: 10px;
@@ -254,7 +275,6 @@ const Form = styled.form`
 `;
 const EmailLabel = styled.label`
   // if invalidEmail is true label turn to red
-  color: ${(props) => (props.invalid ? "#FF2D1B" : "#69235B")};
   text-align: left;
   font-family: Inter;
   font-size: 14px;

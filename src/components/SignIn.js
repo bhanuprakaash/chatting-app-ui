@@ -75,17 +75,50 @@ const SignIn = () => {
         <Line />
       </HorizontalLine>
       {/* added the props for form to update the color of label, border-bottom and show the error message when the email is invallid */}
-      <Form invalid={inValidEmail}>
+      <Form>
         {/* Email label with a conditional style based on invalid email */}
-        <EmailLabel invalid={inValidEmail}>Your email</EmailLabel>
-        {/* eslint-disable-next-line react/no-unknown-property */}
-        <input
+        {/* added the condition that submit button only enabled when the email is valid and password is entered */}
+        {inValidEmail ? (
+          <EmailLabel
+            style={{
+              color: "#FF2D1B",
+            }}
+          >
+            Your email
+          </EmailLabel>
+        ) : (
+          <EmailLabel
+            style={{
+              color: "#69235B",
+            }}
+          >
+            Your email
+          </EmailLabel>
+        )}
+        {/* <input
           type="email"
           value={email}
           onChange={handleEmailChange}
-          invalid={inValidEmail}
           onBlur={handleBlur}
-        />
+        /> */}
+        {inValidEmail ? (
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            onBlur={handleBlur}
+            style={{
+              borderBottom: "1px solid #FF2D1B",
+            }}
+          />
+        ) : (
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            onBlur={handleBlur}
+          />
+        )}
         {/* Show error message when the email is invalid */}
         {inValidEmail && <ErrorMessage>Invalid email address</ErrorMessage>}
         <PassWordLabel>Password</PassWordLabel>
@@ -249,11 +282,11 @@ const Form = styled.form`
     font-weight: 400;
     line-height: 16px;
   }
-  input[type="email"] {
+  /* input[type="email"] {
     // if invalidEmail is true border bottom turn to red
     border-bottom: ${(props) =>
-      props.invalid ? "1px solid #FF2D1B" : "1px solid #CDD1D0"};
-  }
+    props.isinvalid ? "1px solid #FF2D1B" : "1px solid #CDD1D0"};
+  } */
   button {
     background-color: #ffc746;
     border-radius: 10px;
@@ -294,7 +327,7 @@ const Form = styled.form`
 `;
 const EmailLabel = styled.label`
   // if invalidEmail is true label turn to red
-  color: ${(props) => (props.invalid ? "#FF2D1B" : "#69235B")};
+  /* color: ${(props) => (props.isinvalid ? "#FF2D1B" : "#69235B")}; */
   text-align: left;
   font-family: Inter;
   font-size: 14px;
