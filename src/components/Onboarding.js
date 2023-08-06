@@ -64,6 +64,9 @@ const Container = styled.div`
   background-color: #69235b;
   height: 100vh;
   width: 100vw;
+  @media screen and (max-width:320px){
+    height: 150vh;
+  }
 `;
 const LoginContainer = styled.div`
   position: absolute;
