@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+# Chatting-App-UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a front-end implementation of the Chatting App UI based on the design provided in the Figma file. It is built using React.js and Styled Components, providing a fully functional and responsive user interface for a chatting application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+ - [Demo](#demo)
+ - [Getting Started](#getting-started)
+ - [Technologies](#technologies)
+ - [Project Structure](#project-structure)
+ - [Installation](#installation)
+ - [Usage](#usage)
+ - [Features](#features)
 
-### `npm start`
+## Demo
+A live demo of the project can be accessed at [Demo Link](https://chatting-app-5hbm6009m-bhanuprakaash.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
+To get started with this project locally, follow the installation instructions below.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+The project is primarily built using the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React.js: A popular JavaScript library for building user interfaces.
+Styled Components: A CSS-in-JS library to style React components.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is structured as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src
+│   ├── components
+│   │   ├── Message.js
+│   │   ├── Message1.js
+│   │   ├── Message2.js
+│   │   ├── Navigation.js
+│   │   ├── Onboarding.js
+│   │   ├── SignIn.js
+│   │   ├── SignUp.js
+│   │   ├── Splash.js 
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
+Follow the steps below to install and set up the project locally.
 
-### `npm run eject`
+1. Clone the repository to your local machine using the following command:
+```
+git clone https://github.com/bhanuprakaash/chatting-app-ui.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Change the directory to the project directory using the following command:
+```
+cd Chatting-App-UI
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Navigate to the project directory and install the dependencies using the following command:
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To start the development server and run the project locally, use the following command:
+```
+npm start
+```
+Chatting App UI - Readme
 
-## Learn More
+This project is a front-end implementation of the Chatting App UI based on the design provided in the Figma file. It is built using React.js and Styled Components, providing a fully functional and responsive user interface for a chatting application.
+Table of Contents
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Demo
+    Getting Started
+    Technologies Used
+    Project Structure
+    Installation
+    Usage
+    Features
+    Contributing
+    License
+    Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Demo
 
-### Code Splitting
+A live demo of the project can be accessed at Demo Link
+Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To get started with this project locally, follow the installation instructions below.
+Technologies Used
 
-### Analyzing the Bundle Size
+The project is primarily built using the following technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    React.js: A popular JavaScript library for building user interfaces.
+    Styled Components: A CSS-in-JS library to style React components.
 
-### Making a Progressive Web App
+Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project structure is organized as follows:
 
-### Advanced Configuration
+java
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+chatting-app-ui/
+  ├── src/
+  |   ├── components/
+  |   |   ├── Splash.js
+  |   |   ├── Onboarding.js
+  |   |   ├── Signin.js
+  |   |   ├── Signup.js
+  |   |   ├── Message.js
+  |   |   └── ...
+  |   ├── assets/
+  |   |   ├── images/
+  |   |   └── ...
+  |   ├── App.js
+  |   ├── index.js
+  |   └── ...
+  ├── public/
+  ├── package.json
+  ├── package-lock.json
+  ├── .gitignore
+  └── README.md
 
-### Deployment
+Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Follow these steps to install and set up the project:
 
-### `npm run build` fails to minify
+    Clone the repository to your local machine:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bash
+
+git clone https://github.com/your-username/chatting-app-ui.git
+
+    Change into the project directory:
+
+bash
+
+cd chatting-app-ui
+
+    Install the dependencies:
+
+npm install
+
+Usage
+
+To start the development server and run the project locally, use the following command:
+
+```
+npm start
+```
+
+This will launch the application in your browser, accessible at `http://localhost:3000/`.
+
+## Features
+
+The project provides the following features:
+
+    A splash screen with a loading animation.
+    An onboarding screen with a carousel of images.
+    A sign in screen with a form to enter the username and password.
+    A sign up screen with a form to enter the username, email, and password.
+    A chat screen with a list of messages and a form to enter a new message.
+
